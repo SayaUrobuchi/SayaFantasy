@@ -1,0 +1,1028 @@
+
+
+/* global setting */
+body
+{
+	background-color: #000000;
+	color: #C8C8C8;
+	font-family: 'DFKai-SB', 'BiauKai', 'MingLiU', 'Microsoft JhengHei';
+	cursor: default;
+}
+
+#title
+{
+	font-size: 40px;
+	text-align: center;
+}
+
+#sub_title
+{
+	font-size: 24px;
+	text-align: center;
+}
+
+#error
+{
+	font-size: 30px;
+	color: #FF0000;
+}
+
+#main
+{
+	position: relative;
+	background-color: #330000;
+	width: 1000px;
+	height: 600px;
+	margin: auto;
+	margin-top: 15px;
+}
+
+.image
+{
+	height: 100%;
+}
+
+.font
+{
+	font-family: 'DFKai-SB', 'MingLiU', 'Microsoft JhengHei', 'BiauKai';
+}
+
+.central
+{
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+}
+
+.pre
+{
+	white-space: pre-wrap;
+}
+
+.clickable:hover
+{
+	cursor: pointer;
+}
+
+#title_main #logo_text
+{
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	white-space: pre-wrap;
+}
+
+#title_main #title_text
+{
+	position: absolute;
+	top: 10%;
+	width: 100%;
+	text-align: center;
+	font-size: 150px;
+	color: #30CC30;
+	white-space: pre-wrap;
+}
+
+#title_main #title_option
+{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+}
+
+#title_main .container
+{
+	position: relative;
+	display: inline-block;
+	max-width: 200px;
+}
+
+#title_main .option
+{
+	font-size: 45px;
+	margin-bottom: 20px;
+}
+
+#title_main .option:hover
+{
+	position: relative;
+	top: -2px;
+	color: #CC0000;
+}
+
+#adv_main
+{
+	width: 100%;
+	height: 100%;
+}
+
+#adv_main #dialog
+{
+	position: absolute;
+	background-color: #220000;
+	bottom: 0px;
+	z-index: 1000;
+	height: 200px;
+	width: 100%;
+	text-align: center;
+}
+
+#adv_main #dialog .dialog_playmode
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-style: solid;
+	border-width: 2px;
+	margin: 4px;
+	padding: 4px;
+	color: #CC8833;
+	font-size: 20px;
+}
+
+#adv_main #dialog .dialog_command
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#adv_main #dialog .command
+{
+	display: inline-block;
+	border-style: solid;
+	border-width: 2px;
+	margin: 4px;
+	padding: 4px;
+	font-size: 20px;
+}
+
+#adv_main #dialog .clickable:hover
+{
+	color: #FA8000;
+	border-color: #FA8000;
+}
+
+#adv_main #dialog .container
+{
+	position: relative;
+	display: inline-block;
+	width: 900px;
+	height: 140px;
+	top: 45px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	background-color: #441010;
+}
+
+#adv_main #dialog .name
+{
+	font-size: 25px;
+	text-align: left;
+	margin-bottom: 10px;
+	white-space: pre-wrap;
+}
+
+#adv_main #dialog .text
+{
+	font-size: 25px;
+	text-align: left;
+	line-height: 32px;
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+#adv_main #dialog .next
+{
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	max-height: 30px;
+	max-width: 30px;
+}
+
+#adv_main #dialog .next .img
+{
+	max-height: 30px;
+	max-width: 30px;
+}
+
+#adv_main #dialog .tip
+{
+	border-bottom-style: dotted;
+	border-bottom-width: 2px;
+    text-decoration: none;
+	cursor: help;
+}
+
+#adv_main #dialog .tip_sup
+{
+	vertical-align: top;
+	font-size: 14px;
+}
+
+#adv_main #history
+{
+	position: absolute;
+	background-color: #773333;
+	top: 30px;
+	left: 35px;
+	width: 930px;
+	height: 510px;
+	z-index: 1300;
+	overflow: hidden;
+}
+
+#adv_main #history .display
+{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+#adv_main #history .list
+{
+	position: relative;
+}
+
+#adv_main #history .container
+{
+	position: relative;
+	width: 900px;
+	height: 140px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+	margin: 15px 10px;
+	background-color: #441010;
+	overflow: hidden;
+}
+
+#adv_main #history .name
+{
+	font-size: 25px;
+	text-align: left;
+	margin-bottom: 10px;
+	white-space: pre-wrap;
+}
+
+#adv_main #history .text
+{
+	font-size: 25px;
+	text-align: left;
+	line-height: 32px;
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+#adv_main #history .next
+{
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	max-height: 30px;
+	max-width: 30px;
+}
+
+#adv_main #history .next .img
+{
+	max-height: 30px;
+	max-width: 30px;
+}
+
+#adv_main #history .tip
+{
+	border-bottom-style: dotted;
+	border-bottom-width: 2px;
+    text-decoration: none;
+	cursor: help;
+}
+
+#adv_main #history .tip_sup
+{
+	vertical-align: top;
+	font-size: 14px;
+}
+
+#adv_main #tip_msg
+{
+	position: absolute;
+	background-color: #779977;
+	color: #224499;
+	opacity: 0.9;
+	top: 40px;
+	left: 30px;
+	z-index: 1200;
+	width: 932px;
+	max-height: 316px;
+	overflow: hidden;
+	padding: 4px;
+	font-size: 24px;
+	white-space: pre-wrap;
+}
+
+#adv_main #chapter
+{
+	position: absolute;
+	top: 30%;
+	width: 100%;
+	text-align: center;
+}
+
+#adv_main #chapter .main_title
+{
+	font-size: 80px;
+	white-space: pre-wrap;
+}
+
+#adv_main #chapter .sub_title
+{
+	font-size: 60px;
+	white-space: pre-wrap;
+}
+
+#adv_main #bg
+{
+	position: absolute;
+	top: 0px;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+
+#adv_main #bg .container
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+}
+
+#adv_main #bg .image
+{
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+#adv_main #cg
+{
+	position: absolute;
+	top: 0px;
+	z-index: 995;
+	width: 100%;
+	height: 100%;
+}
+
+#adv_main #cg .container
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+}
+
+#adv_main #cg .image
+{
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+#adv_main #image
+{
+	position: absolute;
+	top: 0px;
+	z-index: 50;
+	width: 100%;
+	height: 100%;
+}
+
+#adv_main #image .container
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+}
+
+#adv_main #image .adv_image
+{
+	position: absolute;
+}
+
+#adv_main #branch
+{
+	position: absolute;
+	top: 80px;
+	width: 100%;
+	z-index: 1050;
+	text-align: center;
+}
+
+#adv_main #branch .option
+{
+	position: relative;
+	background-color: #23D77F;
+	color: #7100DC;
+	font-size: 24px;
+	margin-top: 15px;
+}
+
+#adv_main #branch .clickable:hover
+{
+	color: #D77F23;
+}
+
+#loading_main
+{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2000;
+}
+
+#loading_main .container
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#loading_main #loading_text
+{
+	position: absolute;
+	z-index: 2001;
+	top: 35%;
+	left: 34%;
+	font-size: 60px;
+}
+
+#loading_main #loading_progress
+{
+	position: absolute;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #5080AA;
+	width: 700px;
+	top: 60%;
+	left: 150px;
+}
+
+#loading_main #loading_progress .text
+{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	z-index: 2;
+}
+
+#loading_main #loading_progress .bar
+{
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	background-color: #FF0000;
+	width: 100%;
+	height: 100%;
+	white-space: pre-wrap;
+}
+
+#saving_main
+{
+	position: absolute;
+	z-index: 2000;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#saving_main #outer
+{
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+}
+
+#saving_main #outer .container
+{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #105020;
+}
+
+#saving_main .container .save_title
+{
+	font-size: 50px;
+	color: #994466;
+	text-shadow: 1px 0px #332211, -1px 0px #332211, 0px 1px #332211, 0px -1px #332211;
+}
+
+#saving_main .container .save_data
+{
+	margin-top: 16px;
+}
+
+#saving_main .save_command
+{
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	width: 500px;
+	text-align: right;
+}
+
+#saving_main .save_command .command
+{
+	display: inline-block;
+	font-size: 25px;
+	margin: 0px 4px;
+	padding: 2px;
+	border-style: outset;
+}
+
+#saving_main .save_command .clickable:hover
+{
+	color: #FA8000;
+	border-color: #FA8000;
+}
+
+#saving_main .save_data
+{
+	position: relative;
+	left: 5%;
+	width: 90%;
+	height: 400px;
+	overflow: hidden;
+}
+
+#saving_main .save_data .slot_container
+{
+	position: relative;
+}
+
+#saving_main .save_data .slot
+{
+	position: relative;
+	width: 98%;
+	height: 180px;
+	border-style: solid;
+	border-width: 4px;
+	margin-bottom: 12px;
+}
+
+#saving_main .save_data .clickable:hover
+{
+	border-color: #FA007A;
+}
+
+#saving_main .save_data .selected
+{
+	border-style: solid;
+	border-width: 4px;
+	border-color: #CC3030;
+}
+
+#saving_main .save_data .slot .title
+{
+	position: absolute;
+	top: 4px;
+	left: 300px;
+	width: 500px;
+}
+
+#saving_main .save_data .slot .title .id
+{
+	display: inline-block;
+	font-size: 30px;
+}
+
+#saving_main .save_data .slot .title .title_text
+{
+	display: inline-block;
+	font-size: 30px;
+	margin-left: 20px;
+	max-width: 450px;
+}
+
+#saving_main .save_data .slot .date
+{
+	position: absolute;
+	bottom: 4px;
+	right: 8px;
+	font-size: 20px;
+}
+
+#saving_main .save_data .slot .preview
+{
+	position: absolute;
+	top: 15px;
+	left: 12px;
+	width: 250px;
+	height: 150px;
+}
+
+#saving_main .save_data .slot .image
+{
+	width: 100%;
+}
+
+#saving_main .save_data .slot .text
+{
+	position: absolute;
+	left: 300px;
+	top: 60px;
+	font-size: 20px;
+	white-space: pre-wrap;
+}
+
+#saving_main .save_data .slot .new
+{
+	position: absolute;
+	font-size: 40px;
+	color: #FF0000;
+	top: 0px;
+	left: 0px;
+	border-style: solid;
+	border-color: #FF0000;
+	border-width: 4px;
+	text-shadow: 2px 0px #000000, -2px 0px #000000, 0px 2px #000000, 0px -2px #000000;
+}
+
+#extra_main
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#extra_main .container
+{
+	position: relative;
+	background-color: #284477;
+	width: 100%;
+	height: 100%;
+}
+
+#extra_main .header
+{
+	position: relative;
+	max-height: 80px;
+}
+
+#extra_main .header .title
+{
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	font-size: 40px;
+}
+
+#extra_main .header .extra_command
+{
+	position: absolute;
+	right: 0px;
+}
+
+#extra_main .header .extra_command .command
+{
+	display: inline-block;
+	border-style: solid;
+	border-width: 2px;
+	font-size: 24px;
+	padding: 4px;
+	margin: 8px;
+}
+
+#extra_main .header .extra_command .clickable:hover
+{
+	color: #FFAC55;
+}
+
+#extra_main .header .extra_command .selected
+{
+	color: #FF3733;
+}
+
+#extra_main .content
+{
+	position: absolute;
+	top: 80px;
+	width: 100%;
+}
+
+#extra_main .extra_bgm
+{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+#extra_main .extra_bgm .title
+{
+	position: relative;
+	left: 16px;
+	font-size: 28px;
+}
+
+#extra_main .extra_bgm .title .text
+{
+	display: inline-block;
+}
+
+#extra_main .extra_bgm .title .clickable:hover
+{
+	color: #FFAC55;
+}
+
+#extra_main .extra_bgm .title .command
+{
+	display: inline-block;
+	border-style: solid;
+	border-width: 2px;
+	font-size: 20px;
+	margin-left: 30px;
+	padding: 4px;
+}
+
+#extra_main .extra_bgm .rate
+{
+	position: absolute;
+	top: 0px;
+	right: 12px;
+	font-size: 24px;
+}
+
+#extra_main .extra_bgm .data
+{
+	position: relative;
+}
+
+#extra_main .extra_bgm .data .column
+{
+	position: relative;
+	display: inline-block;
+	width: 400px;
+	margin-left: 70px;
+}
+
+#extra_main .extra_bgm .data .bgm
+{
+	position: relative;
+	background-color: #006BDC;
+	font-size: 20px;
+	height: 35px;
+	width: 360px;
+	line-height: 35px;
+	padding-left: 10px;
+	margin-top: 10px;
+}
+
+#extra_main .extra_bgm .data .bgm .num
+{
+	position: relative;
+	display: inline-block;
+	white-space: pre-wrap;
+}
+
+#extra_main .extra_bgm .data .bgm .text
+{
+	position: relative;
+	display: inline-block;
+	white-space: pre-wrap;
+}
+
+#extra_main .extra_bgm .data .clickable:hover
+{
+	background-color: #006BDC;
+	color: #FF9D37;
+}
+
+#extra_main .extra_bgm .data .selected
+{
+	background-color: #FF9D37;
+	color: #0300D8;
+}
+
+#extra_main .extra_cg
+{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+#extra_main .extra_cg .title
+{
+	position: relative;
+	left: 16px;
+	font-size: 28px;
+}
+
+#extra_main .extra_cg .page
+{
+	position: relative;
+	margin-top: 8px;
+	margin-left: 30px;
+}
+
+#extra_main .extra_cg .page .text
+{
+	display: inline-block;
+	white-space: pre-wrap;
+	font-size: 20px;
+}
+
+#extra_main .extra_cg .page .clickable:hover
+{
+	color: #FFAC55;
+}
+
+#extra_main .extra_cg .page .page_link
+{
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 8px;
+	padding: 4px;
+}
+
+#extra_main .extra_cg .page .selected
+{
+	color: #FF8080;
+}
+
+#extra_main .extra_cg .rate
+{
+	position: absolute;
+	top: 0px;
+	right: 12px;
+	font-size: 24px;
+}
+
+#extra_main .extra_cg .data
+{
+	position: relative;
+}
+
+#extra_main .extra_cg .data .row
+{
+	position: relative;
+	margin-left: 15px;
+	margin-top: 20px;
+	width: 970px;
+	height: 180px;
+}
+
+#extra_main .extra_cg .data .cg
+{
+	position: relative;
+	display: inline-block;
+	background-color: #7100DC;
+	margin-left: 18px;
+	width: 220px;
+	height: 165px;
+}
+
+#extra_main .extra_cg .data .cg .cg_image
+{
+	position: relative;
+	background-color: #000000;
+	width: 200px;
+	height: 120px;
+	top: 10px;
+	margin-left: 10px;
+}
+
+#extra_main .extra_cg .data .cg .image
+{
+	width: 100%;
+	height: 100%;
+}
+
+#extra_main .extra_cg .data .cg .cg_rate
+{
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+	font-size: 20px;
+}
+
+#extra_main .cg_display
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+
+#extra_main .cg_display .image
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#extra_main .extra_tip
+{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+#extra_main .extra_tip .left
+{
+	position: absolute;
+	top: 0px;
+	left: 40px;
+	width: 310px;
+}
+
+#extra_main .extra_tip .left .title
+{
+	font-size: 30px;
+}
+
+#extra_main .extra_tip .left .container
+{
+	position: relative;
+	margin-top: 16px;
+	background-color: #33AA70;
+	height: 435px;
+	overflow: hidden;
+}
+
+#extra_main .extra_tip .left .list
+{
+	position: relative;
+}
+
+#extra_main .extra_tip .left .tip
+{
+	margin-left: 10px;
+	color: #1020AA;
+	font-size: 24px;
+	line-height: 40px;
+}
+
+#extra_main .extra_tip .left .clickable:hover
+{
+	color: #AA7700;
+}
+
+#extra_main .extra_tip .right
+{
+	position: absolute;
+	top: 0px;
+	left: 390px;
+}
+
+#extra_main .extra_tip .rate
+{
+	position: absolute;
+	top: 0px;
+	right: 12px;
+	font-size: 24px;
+}
+
+#extra_main .extra_tip .right .container
+{
+	position: relative;
+	background-color: #332200;
+	top: 36px;
+	width: 546px;
+	height: 436px;
+	padding: 12px;
+	overflow: hidden;
+}
+
+#extra_main .extra_tip .right .title
+{
+	font-size: 30px;
+}
+
+#extra_main .extra_tip .right .text
+{
+	font-size: 20px;
+	margin-top: 20px;
+	white-space: pre-wrap;
+}

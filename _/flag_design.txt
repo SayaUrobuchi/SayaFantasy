@@ -1,0 +1,90 @@
+[立flag]
+action: ACTION 或 ACTION陣列
+ACTION: struct
+- 以下會全部生效
+- 生效時機: 該幕結束後 (防止存檔讀檔時重覆執行)
+- 生效對象: 目前僅DIALOG
+	flag (optional): FLAG名 或 FLAG名的陣列
+	- 可以是 string 或 array of string, 會打開所有指定的flag
+	
+	global_flag (optional): 同上，但對象為全域共通flag
+	
+	break_flag (optional): FLAG名 或 FLAG名的陣列
+	- 可以是 string 或 array of string, 會拆掉所有指定的flag
+	
+	break_global_flag (optional): 同上，但對象為全域共通flag
+	
+	value (optional): VALUE 或 VALUE陣列
+	global_value (optional): VALUE 或 VALUE陣列
+	VALUE: struct
+	
+		target: 對象名
+		op: ASSIGN | ADD | SUB | MUL | DIV
+		- 分別為指定、加、減、乘、除
+		value: 整數 或 對象名
+		
+	func (optional): FUNCTION 或 FUNCTION陣列
+	- 會依序執行，可寫function樣板產生器或看情況硬刻
+
+[條件分歧]
+branch: BRANCH陣列
+- 從第一個BRANCH開始依序測試，執行第一個通過的BRANCH
+- 最後一個BRANCH無條件作為else通過
+BRANCH: struct
+	next_scene_id: ID
+	- 當測試條件通過時，前往編號為ID的場景
+	
+	condition: CONDITION 或 CONDITION陣列
+	- 當存在多個CONDITION時，依序處理，以or連接之
+	- 當出現第一個true後，後面會被略去
+	CONDITION: struct
+	- 以下的所有欄位都可同時存在，不同欄位間以and連接
+	
+		flag (optional): FLAG名 或 FLAG名的陣列
+		- 判定FLAG是否已立，若成立則true，若否則false
+		- flag之間以and連接之
+		
+		global_flag (optional): 同上，但目標為global的flag
+		
+		not_flag (optional): FLAG名 或 FLAG名的陣列
+		- 判定FLAG是否已立，若成立則false，若否則true
+		- flag之間以and連接之
+		
+		not_global_flag (optional): 同上，但目標為global的flag
+		
+		value (optional): COMPARE 或 COMPARE陣列
+		global_value (optional): COMPARE 或 COMPARE陣列
+		COMPARE: struct
+		- 符合時視為true
+		
+			target: value名
+			op: EQ | NEQ | GT | GEQ | LT | LEQ
+			- 分別是: 等於、不等於、大於、大於等於、小於、小於等於
+			value: 整數 或 value名
+			
+		func (optional): FUNCTION 或 FUNCTION陣列
+		- 會依序執行，以回傳結果為準
+		- 若回傳非boolean則以javascript的true/false判斷為基準
+		例如undefined, 0和null皆視作false
+
+[選項分歧]
+- 從display上就不屬於dialog
+	selection: SELECTION陣列
+		post_action: ACTION 或 ACTION陣列
+			flag (optional): FLAG名 或 FLAG名的陣列
+			- 當玩家選擇這條路線時，立下這些flag
+			global_flag (optional): 同上，對象為global flag
+			break_flag (optional): FLAG名 或 FLAG名的陣列
+			- 當玩家選擇這條路線時，拆除這些flag
+			break_global_flag (optional): 同上，對象為global flag
+			value (optional): VALUE 或 VALUE陣列
+			global_value (optional): VALUE 或 VALUE陣列
+			- 參考立flag的部份
+			func (optional): FUNCTION 或 FUNCTION陣列
+			- 會依序執行，可寫function樣板產生器或看情況硬刻
+		next_scene_id: ID
+		- 當玩家選擇這條路線時，前往編號為ID的場景
+		text: TEXT
+		- 型別為string，為該選擇顯示在畫面上的名稱
+		- 支持格式化內文
+	
